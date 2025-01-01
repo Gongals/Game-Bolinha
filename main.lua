@@ -5,6 +5,7 @@ local speedX, speedY = 300, 300
 local speed = 3000
 local radius = 50
 local start = love.timer.getTime()
+local timeover = 0 -- Tempo que o jogador ficou vivo
 local gameover = false
 local windowWidth, windowHeight = love.graphics.getDimensions()
 
@@ -41,11 +42,17 @@ function love.draw()
     love.graphics.setColor(1, 1, 1)
     love.graphics.print("Tempo: " .. time, 10, 10)
 
+
     if gameover then
+        -- Calcula o tempo de jogo
+        local minutes = math.floor(timeover / 60)
+        local seconds = math.floor(timeover % 60)
+        local timeover = string.format("%02d:%02d", minutes, seconds)
+
         love.graphics.setColor(1, 1, 1)  -- Cor branca para o texto
         love.graphics.setFont(defaultFont)  -- Fonte padrão
         love.graphics.print("Fim de jogo", 10, 50)
-        love.graphics.print("Tempo Vivo: " .. time, 10, 70)
+        love.graphics.print("Tempo Vivo: " .. timeover, 10, 70)
         
         -- Muda para a cor vermelha e fonte maior para o "You Lose"
         love.graphics.setColor(1, 0, 0)  -- Cor vermelha
@@ -59,6 +66,8 @@ function love.draw()
     end
 end
 
+
+
 function checkcollision()
     local dx = z - x
     local dy = t - y
@@ -66,12 +75,12 @@ function checkcollision()
     
     if distance <= radius * 2 then
         gameover = true
+        timeover = love.timer.getTime() - start
     end
 end
 
 
 -- quando a bola bater na parede, ela muda de direção 
-
 --[[function love.update(dt)
     x = x + speedX * dt
     z = z + speedZ * dt
@@ -111,7 +120,6 @@ end
     end
     
 end--]]
-
 --[[function love.keypressed(key, scancode, isrepeat)
     -- Move a bolinha com as setas do teclado
     if key == "w" then
