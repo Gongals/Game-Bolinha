@@ -4,13 +4,13 @@
 
 # Bolinha - Jogo Simples Love2D
 
-"Bolinha" é um jogo simples criado com a framework Love2D onde o objetivo é sobreviver o máximo possível enquanto evita a colisão com a bolinha azul. As bolas se movem de maneira aleatória e a bola branca (controlada pelo jogador) deve desviar da azul. Com o tempo, a velocidade das bolas aumenta automaticamente, tornando o jogo mais difícil.
+"Bolinha" é um jogo simples criado com a framework Love2D onde o objetivo é sobreviver o máximo possível enquanto evita a colisão com killer. As bolas se movem de maneira aleatória e a bola  (controlada pelo jogador) deve desviar do killer . Com o tempo, a velocidade das bolas aumenta automaticamente, tornando o jogo mais difícil.
 
 ## Como Jogar
 
-- A bolinha branca é controlada com as teclas **W**, **A**, **S**, **D**.
-- O objetivo é sobreviver o máximo de tempo possível sem colidir com a bolinha azul.
-- O tempo de sobrevivência será mostrado no canto superior da tela. Caso colida com a bolinha azul, o jogo termina e o tempo vivido será mostrado.
+- A bolinha  é controlada com as teclas **W**, **A**, **S**, **D**.
+- O objetivo é sobreviver o máximo de tempo possível sem colidir com o killer.
+- O tempo de sobrevivência será mostrado no canto superior da tela. Caso colida com o killer, o jogo termina e o tempo vivido será mostrado.
 - O jogo fica mais difícil com o tempo, com as bolas aumentando a velocidade automaticamente.
 
 ## Funcionalidades
@@ -43,13 +43,13 @@
 
 # Bolinha - Simple Love2D Game
 
-"Bolinha" is a simple game created with the Love2D framework where the goal is to survive as long as possible while avoiding a collision with the blue ball. The balls move randomly, and the white ball (controlled by the player) must dodge the blue one. Over time, the speed of the balls increases automatically, making the game more difficult.
+"Bolinha" is a simple game created with the Love2D framework where the objective is to survive as long as possible while avoiding complications with the killer. The balls move in a desired manner and the ball (controlled by the player) must avoid the killer. Over time, the speed of the balls automatically increases, making the game more difficult.
 
 ## How to Play
 
-- The white ball is controlled using the **W**, **A**, **S**, **D** keys.
-- The goal is to survive as long as possible without colliding with the blue ball.
-- The survival time will be displayed at the top of the screen. If you collide with the blue ball, the game ends, and the time survived will be shown.
+- The ball is controlled using the **W**, **A**, **S**, **D** keys.
+- The goal is to survive as long as possible without colliding with the killer.
+- The survival time will be displayed at the top of the screen. If you collide with the killer, the game ends, and the time survived will be shown.
 - The game becomes more difficult over time, with the balls' speed increasing automatically.
 
 ## Features
